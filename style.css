@@ -6,7 +6,7 @@
 
 *::selection {
   color: white;
-  background: yellow;
+  background: orange;
 }
 
 .navbar {
@@ -72,7 +72,7 @@
 }
 
 .search-area button:hover {
-  background: yellow;
+  background: orange;
 }
 
 .icons {
@@ -97,11 +97,11 @@
 }
 
 .icons #user:hover {
-  color: yellow;
+  color: orange;
 }
 
 .icons a #cart:hover {
-  color: yellow;
+  color: orange;
 }
 
 .nav-area ul {
@@ -135,7 +135,7 @@
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
-  background: radial-gradient(white, yellow);
+  background: radial-gradient(white, orange);
 }
 
 .col-2 {
@@ -193,4 +193,156 @@
 
 .logo {
   text-align: center;
+}
+
+/* Featured Categories */
+
+.featured-products {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 3rem auto;
+}
+
+.featured-products h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.featured-products i {
+  position: absolute;
+  top: 60%;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  left: 0.5%;
+  z-index: 1;
+}
+
+.featured-products i:hover {
+  opacity: 1;
+}
+
+.featured-products i:nth-of-type(2) {
+  left: 98%;
+  text-align: right;
+}
+
+.carousel-container {
+  width: 98%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: left;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel-container::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.img-card {
+  display: block;
+  min-width: 400px;
+  height: 350px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px 10px;
+  box-shadow: -3px 3px 6px #666666, 3px -3px 6px #ffffff;
+  background-color: rgb(236, 236, 236);
+}
+
+.img-box {
+  height: 275px;
+  position: relative;
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.img-details-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-details-box .img-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.img-info a {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.img-info span {
+  color: rgb(80, 80, 80);
+}
+
+.img-details-box .price {
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.overlay {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.315);
+  display: flex;
+  visibility: hidden;
+}
+
+.overlay .add-to-cart-btn {
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  position: relative;
+  top: 40%;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.overlay .add-to-cart-btn:hover {
+  background: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.img-box:hover .overlay {
+  visibility: visible;
+  animation: animation 0.5s;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
