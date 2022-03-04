@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 *::selection {
@@ -36,6 +37,7 @@
 .search-user-area {
   display: flex;
   justify-content: space-between;
+  width: 72%;
 }
 
 .search-area {
@@ -85,23 +87,38 @@
 .icons #user {
   padding: 5px;
   color: rgb(24, 24, 24);
-  font-size: 2rem;
-  transition: 0.5s;
+  transition: 0.3s;
+  text-align: center;
 }
 
 .icons a #cart {
   padding: 5px;
   color: rgb(24, 24, 24);
-  font-size: 2rem;
-  transition: 0.5s;
+  font-size: 1.7rem;
+  transition: 0.3s;
+  margin: 5px;
 }
-
-.icons #user:hover {
-  color: orange;
-}
-
 .icons a #cart:hover {
   color: orange;
+}
+
+.icons a:nth-child(2):hover {
+  color: orange;
+  border: 1px solid orange;
+}
+
+.icons a:nth-child(2) {
+  height: 43px;
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 1.2rem;
+  padding-top: 5px;
+  padding-right: 2px;
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav-area ul {
@@ -232,12 +249,14 @@
 }
 
 .carousel-container {
-  width: 98%;
+  width: 95%;
+  padding: 0 10px;
   margin: 10px auto;
   display: flex;
   justify-content: left;
   transform: translateX(0);
   transition: all 0.5s ease-in-out;
+  /* overflow: hidden; */
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -246,31 +265,40 @@
 
 .img-card {
   display: block;
-  min-width: 400px;
-  height: 350px;
+  min-width: 298px;
+  height: 400px;
   position: relative;
   left: 0;
   transition: 0.5s;
   overflow: hidden;
   border-radius: 10px;
   margin: 10px 10px;
-  box-shadow: -3px 3px 6px #666666, 3px -3px 6px #ffffff;
+  /* box-shadow: -3px 3px 6px #666666, 3px -3px 6px #ffffff; */
   background-color: rgb(236, 236, 236);
 }
 
 .img-box {
-  height: 275px;
+  height: 60%;
+  min-width: 150px;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  background: rgb(236, 236, 236);
 }
 
 .img-box img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
   box-sizing: border-box;
+  margin: auto;
+}
+
+.details-buy-cart {
+  background: rgb(223, 223, 223);
 }
 
 .img-details-box {
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -283,7 +311,7 @@
 
 .img-info a {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 600;
@@ -296,46 +324,45 @@
 .img-details-box .price {
   padding: 0.5rem;
   margin-right: 1.5rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
-.overlay {
-  justify-content: center;
+.buy-cart-container {
   align-items: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.315);
-  display: flex;
-  visibility: hidden;
+  position: relative;
+  top: 20px;
+  left: 15px;
 }
 
-.overlay .add-to-cart-btn {
-  width: 300px;
+.buy-now {
+  width: 120px;
   height: 35px;
+  margin: 5px;
+  border-radius: 5px;
   border: none;
-  border-radius: 3px;
-  text-transform: capitalize;
-  font-size: 1rem;
-  position: relative;
-  top: 40%;
-  font-weight: bold;
+  color: white;
+  background: rgb(36, 36, 36);
   transition: 0.3s;
 }
 
-.overlay .add-to-cart-btn:hover {
-  background: orange;
-  color: white;
-  cursor: pointer;
+.buy-now:hover {
+  background: #000000;
 }
 
-.img-box:hover .overlay {
-  visibility: visible;
-  animation: animation 0.5s;
+.add-to-cart {
+  width: 120px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: rgba(255, 166, 0, 0.89);
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  background: orange;
 }
 
 @keyframes animation {
