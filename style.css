@@ -14,10 +14,8 @@
   display: grid;
   padding: 0.7rem 2.5rem 1rem 2.5rem;
   background: rgb(230, 230, 230);
-  top: 0;
-  left: 0;
-  right: 0;
   position: sticky;
+  position: fixed;
   width: 100%;
   z-index: 9;
 }
@@ -153,6 +151,8 @@
   padding-left: 25px;
   padding-right: 25px;
   background: radial-gradient(white, orange);
+  position: relative;
+  top: 149px;
 }
 
 .col-2 {
@@ -217,8 +217,9 @@
 .featured-products {
   width: 100%;
   overflow: hidden;
-  position: relative;
   margin: 3rem auto;
+  position: relative;
+  top: 149px;
 }
 
 .featured-products h2 {
